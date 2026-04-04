@@ -21,21 +21,20 @@ header {
   top: 0;
   width: 100%;
   background: white;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
   border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  overflow-x: auto; /* KEY */
 }
 
 /* NAV */
 nav {
   display: flex;
   gap: 40px;
-  padding: 15px;
-  flex-wrap: wrap; /* KEY FIX */
-  justify-content: center;
+  padding: 15px 20px;
+  min-width: max-content; /* KEY */
 }
 
+/* MENU ITEMS */
 nav a {
   text-decoration: none;
   color: black;
@@ -43,7 +42,16 @@ nav a {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 500;
-  white-space: nowrap; /* prevents breaking */
+  white-space: nowrap;
+}
+
+/* HIDE SCROLLBAR (clean look) */
+header::-webkit-scrollbar {
+  display: none;
+}
+header {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* HERO */
@@ -66,7 +74,7 @@ nav a {
 /* TITLE */
 h1 {
   font-family: "Instrument Serif", serif;
-  font-size: 52px;
+  font-size: 48px;
   letter-spacing: 2px;
   color: white;
   margin: 0 0 20px 0;
@@ -75,28 +83,21 @@ h1 {
 /* SUBTITLE */
 p {
   font-family: "Instrument Serif", serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #eaeaea;
   margin: 0;
 }
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 600px) {
+/* DESKTOP CENTERED MENU */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
   nav {
-    gap: 20px;
-  }
-
-  nav a {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  p {
-    font-size: 16px;
+    min-width: auto;
   }
 }
 </style>
