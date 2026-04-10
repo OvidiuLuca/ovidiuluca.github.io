@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,25 +8,22 @@
     <meta name="geo.placename" content="Romania" />
     <meta name="description" content="Opsistech - Soluții avansate de Machine Vision și automatizări industriale în România. Inspecție vizuală și controlul calității." />
     <link rel="alternate" hreflang="ro-ro" href="https://opsistech.ro/" />
-
-```
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Opsistech",
-  "url": "https://opsistech.ro",
-  "description": "Specialiști în Machine Vision și automatizare industrială în România.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "RO"
-  },
-  "knowsAbout": ["Machine Vision", "Industrial Automation", "Quality Control", "Artificial Intelligence"],
-  "areaServed": "Romania"
-}
-</script>
-```
-
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Opsistech",
+      "url": "https://opsistech.ro",
+      "description": "Specialiști în Machine Vision și automatizare industrială în România.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO"
+      },
+      "knowsAbout": ["Machine Vision", "Industrial Automation", "Quality Control", "Artificial Intelligence"],
+      "areaServed": "Romania"
+    }
+    </script>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -59,69 +55,69 @@ header.scrolled nav a { color: var(--black); opacity: 1; }
 
 /* Language switcher — lives in the footer */
 .lang-switcher { display: flex; align-items: center; gap: 4px; }
-.lang-btn { font-family: “Instrument Sans”, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background: none; border: 1px solid var(–line); color: var(–mid); padding: 4px 10px; cursor: pointer; transition: all 0.2s; border-radius: 2px; }
-.lang-btn.active { color: var(–black); border-color: var(–black); }
-.lang-btn:hover { color: var(–black); border-color: var(–black); }
+.lang-btn { -webkit-appearance: none; appearance: none; font-family: "Instrument Sans", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; background: none; border: 1px solid var(--line); color: var(--mid); padding: 4px 10px; cursor: pointer; transition: all 0.2s; border-radius: 2px; }
+.lang-btn.active { color: var(--black); border-color: var(--black); }
+.lang-btn:hover { color: var(--black); border-color: var(--black); }
 
 #home { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
 #hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; font-size: 0; color: transparent; }
-#home::after { content: “”; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; }
+#home::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; }
 .hero-inner { position: relative; z-index: 2; }
 section:not(#home) { padding: 96px 40px; }
-section.gray { background: var(–gray); }
+section.gray { background: var(--gray); }
 .s-wrap { max-width: 960px; margin: 0 auto; }
-.s-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(–mid); margin-bottom: 16px; }
-.s-title { font-family: “Instrument Serif”, serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(–black); line-height: 1.1; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(–line); }
+.s-label { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--mid); margin-bottom: 16px; }
+.s-title { font-family: "Instrument Serif", serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; color: var(--black); line-height: 1.1; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-.about-text p { font-size: 16px; color: var(–mid); line-height: 1.8; margin-bottom: 20px; }
+.about-text p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 20px; }
 .about-text p:last-child { margin-bottom: 0; }
 .values { list-style: none; }
-.values li { padding: 20px 0; border-bottom: 1px solid var(–line); display: flex; gap: 20px; align-items: flex-start; }
-.values li:first-child { border-top: 1px solid var(–line); }
-.v-n { font-family: “Instrument Serif”, serif; font-size: 22px; color: var(–line); line-height: 1; flex-shrink: 0; width: 28px; padding-top: 2px; }
-.v-body strong { display: block; font-size: 14px; font-weight: 600; color: var(–black); margin-bottom: 3px; letter-spacing: 0.3px; }
-.v-body span { font-size: 14px; color: var(–mid); }
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(–line); border-left: 1px solid var(–line); }
-.svc-item { padding: 36px 28px; border-right: 1px solid var(–line); border-bottom: 1px solid var(–line); transition: background 0.2s; }
+.values li { padding: 20px 0; border-bottom: 1px solid var(--line); display: flex; gap: 20px; align-items: flex-start; }
+.values li:first-child { border-top: 1px solid var(--line); }
+.v-n { font-family: "Instrument Serif", serif; font-size: 22px; color: var(--line); line-height: 1; flex-shrink: 0; width: 28px; padding-top: 2px; }
+.v-body strong { display: block; font-size: 14px; font-weight: 600; color: var(--black); margin-bottom: 3px; letter-spacing: 0.3px; }
+.v-body span { font-size: 14px; color: var(--mid); }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.svc-item { padding: 36px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background 0.2s; }
 .svc-item:hover { background: #ededea; }
-.svc-item h3 { font-family: “Instrument Serif”, serif; font-size: 20px; font-weight: 400; color: var(–black); margin-bottom: 10px; line-height: 1.2; }
-.svc-item p { font-size: 14px; color: var(–mid); line-height: 1.65; }
+.svc-item h3 { font-family: "Instrument Serif", serif; font-size: 20px; font-weight: 400; color: var(--black); margin-bottom: 10px; line-height: 1.2; }
+.svc-item p { font-size: 14px; color: var(--mid); line-height: 1.65; }
 .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.contact-info p { font-size: 16px; color: var(–mid); line-height: 1.8; margin-bottom: 40px; }
+.contact-info p { font-size: 16px; color: var(--mid); line-height: 1.8; margin-bottom: 40px; }
 .cdet { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-.cdet-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–black); min-width: 72px; padding-top: 2px; }
-.cdet-val { font-size: 15px; color: var(–mid); }
-.form label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–black); margin-bottom: 8px; }
-.form input, .form textarea { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(–line); font-size: 15px; font-family: “Instrument Sans”, sans-serif; color: var(–black); background: transparent; outline: none; transition: border-color 0.2s; margin-bottom: 32px; display: block; }
-.form input:focus, .form textarea:focus { border-color: var(–black); }
+.cdet-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--black); min-width: 72px; padding-top: 2px; }
+.cdet-val { font-size: 15px; color: var(--mid); }
+.form label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+.form input, .form textarea { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid var(--line); font-size: 15px; font-family: "Instrument Sans", sans-serif; color: var(--black); background: transparent; outline: none; transition: border-color 0.2s; margin-bottom: 32px; display: block; }
+.form input:focus, .form textarea:focus { border-color: var(--black); }
 .form textarea { resize: none; height: 80px; }
-.form button { font-family: “Instrument Sans”, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(–white); background: var(–black); border: none; padding: 16px 40px; cursor: pointer; transition: background 0.3s; width: 100%; }
+.form button { -webkit-appearance: none; appearance: none; font-family: "Instrument Sans", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); background: var(--black); border: none; padding: 16px 40px; cursor: pointer; transition: opacity 0.3s; width: 100%; border-radius: 0; }
 .form button:hover { opacity: 0.72; }
-footer { border-top: 1px solid var(–line); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-.f-brand { font-family: “Instrument Serif”, serif; font-size: 18px; color: var(–black); }
-.f-sub { font-size: 12px; color: var(–mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.f-brand { font-family: "Instrument Serif", serif; font-size: 18px; color: var(--black); }
+.f-sub { font-size: 12px; color: var(--mid); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
 .f-links { display: flex; gap: 32px; }
-.f-links a { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(–mid); text-decoration: none; transition: color 0.2s; }
-.f-links a:hover { color: var(–black); }
+.f-links a { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+.f-links a:hover { color: var(--black); }
 .f-copy { font-size: 12px; color: #b0b0aa; }
 @media (max-width: 800px) {
-.about-cols, .contact-cols { grid-template-columns: 1fr; gap: 40px; }
-.svc-grid { grid-template-columns: repeat(3, 1fr); }
-nav { gap: 28px; }
-footer { flex-direction: column; align-items: flex-start; gap: 24px; }
-.f-links { flex-wrap: wrap; gap: 20px; }
+  .about-cols, .contact-cols { grid-template-columns: 1fr; gap: 40px; }
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
+  nav { gap: 28px; }
+  footer { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .f-links { flex-wrap: wrap; gap: 20px; }
 }
 @media (max-width: 600px) {
-.svc-grid { grid-template-columns: 1fr 1fr; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  nav { gap: 20px; }
 }
-@media (max-width: 520px) {
-.svc-grid { grid-template-columns: 1fr; }
-nav { gap: 16px; padding: 18px 20px; }
-section:not(#home) { padding: 72px 24px; }
-footer { padding: 32px 24px; }
+@media (max-width: 400px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  nav { gap: 16px; padding: 18px 16px; }
+  section:not(#home) { padding: 72px 24px; }
+  footer { padding: 32px 24px; }
 }
 </style>
-
 </head>
 <body>
 
@@ -140,14 +136,11 @@ footer { padding: 32px 24px; }
 </header>
 
 <section id="home">
-  <video id="hero-video" autoplay muted loop playsinline>
-    <source src="Hero.mp4" type="video/mp4">
-  </video>
+  <video id="hero-video" autoplay muted loop playsinline><source src="Hero.mp4" type="video/mp4"></video>
   <div class="hero-inner"></div>
 </section>
 
 <!-- ABOUT -->
-
 <section id="about" class="gray">
   <div class="s-wrap">
     <p class="s-label" data-en="Who We Are" data-ro="Cine Suntem">Who We Are</p>
@@ -190,7 +183,6 @@ footer { padding: 32px 24px; }
 </section>
 
 <!-- SERVICES -->
-
 <section id="services">
   <div class="s-wrap">
     <p class="s-label" data-en="What We Do" data-ro="Ce Facem">What We Do</p>
@@ -237,7 +229,6 @@ footer { padding: 32px 24px; }
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="gray">
   <div class="s-wrap">
     <p class="s-label" data-en="Get in Touch" data-ro="Contactați-ne">Get in Touch</p>
@@ -296,7 +287,6 @@ footer { padding: 32px 24px; }
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
 <script>
 (function() {
 
@@ -434,6 +424,5 @@ footer { padding: 32px 24px; }
 
 })();
 </script>
-
 </body>
 </html>
