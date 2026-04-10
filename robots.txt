@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
 
+# Direct bots to your sitemap
+Sitemap: https://opsistech.ro/sitemap.xml
