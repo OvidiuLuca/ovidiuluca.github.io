@@ -171,7 +171,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
            data-ro="De la inspecție automatizată și măsurare de înaltă precizie, până la ghidarea roboților și urmărire inteligentă, sistemele funcționează impecabil în condiții industriale reale — cu viteză, la scară și sub presiune.">
           From automated inspection and high-accuracy measurement to robot guidance and intelligent tracking, systems operate seamlessly in real-world industrial conditions — at speed, at scale, and under pressure.</p>
         <p data-en="The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required."
-           data-ro="Principiul călăuzitor rămâne simplu: cea mai bună tehnologie este invizibilă. Pur și simplu funcționează — constant, eficient și exact cum este necesar.">
+           data-ro="Principiul fundamental rămâne simplu: cea mai bună tehnologie este invizibilă. Pur și simplu funcționează — constant, eficient și exact cum este necesar.">
           The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required.</p>
       </div>
       <ul class="values">
@@ -213,12 +213,6 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
         <p  data-en="Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation."
             data-ro="Localizare și preluare precisă a obiectelor.<br>Potrivit pentru bin picking, asamblare auto și automatizarea logisticii.">
           Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation.</p>
-      </a>
-      <a href="services/measurement-metrology.html" class="svc-item" style="text-decoration:none;display:block;">
-        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
-        <p  data-en="High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications."
-            data-ro="Măsurare dimensională de înaltă precizie la nivel de micron.<br>Verificarea conformității pieselor cu specificațiile tehnice.">
-          High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications.</p>
       </a>
       <a href="services/identification-tracking.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
@@ -337,13 +331,15 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 
     // Update <html lang>
     document.documentElement.lang = lang === 'ro' ? 'ro' : 'en';
+    // Persist choice across pages
+    try { localStorage.setItem('lang', lang); } catch(e) {}
   }
 
   // Expose globally for onclick
   window.setLang = setLang;
 
-  // Apply saved language on load
-  setLang(currentLang);
+  // Apply saved language on load (default: English)
+  setLang(localStorage.getItem('lang') || 'en');
 
   /* ── EmailJS ── */
   emailjs.init('hGRXPG-mP7R1Pvs8m');

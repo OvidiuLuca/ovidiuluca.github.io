@@ -251,9 +251,9 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3 data-en="Robot Guidance" data-ro="Ghidare Robotică">Robot Guidance</h3>
         <p data-en="AI-enhanced localisation and picking for flexible robotic systems." data-ro="Localizare și preluare îmbunătățite cu IA pentru sisteme robotice flexibile.">AI-enhanced localisation and picking for flexible robotic systems.</p>
       </a>
-      <a href="./measurement-metrology.html" class="related-item">
-        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
-        <p data-en="High-precision dimensional verification at micron-level accuracy." data-ro="Verificare dimensională de înaltă precizie la nivel de micron.">High-precision dimensional verification at micron-level accuracy.</p>
+      <a href="./identification-tracking.html" class="related-item">
+        <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
+        <p data-en="Barcode, QR, and serial number reading for full traceability." data-ro="Citirea codurilor de bare, QR și a numerelor de serie pentru trasabilitate completă.">Barcode, QR, and serial number reading for full traceability.</p>
       </a>
     </div>
   </div>
@@ -298,9 +298,10 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
       if(val!==null)el.innerHTML=val;
     });
     document.documentElement.lang=lang==='ro'?'ro':'en';
+    try{localStorage.setItem('lang',lang);}catch(e){}
   }
   window.setLang=setLang;
-  setLang(currentLang);
+  setLang(localStorage.getItem('lang')||'en');
   var header=document.getElementById('site-header');
   function updateHeader(){header.classList.toggle('shrunk',window.scrollY>80);}
   window.addEventListener('scroll',updateHeader,{passive:true});

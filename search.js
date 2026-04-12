@@ -38,13 +38,6 @@
       excerptRo: 'Robotică ghidată vizual pentru bin picking, asamblare și logistică. Estimare de poziție 2D și 3D pentru toți marii producători de roboți.'
     },
     {
-      title: 'Measurement & Metrology',
-      titleRo: 'Măsurare & Metrologie',
-      url: '/services/measurement-metrology.html',
-      excerpt: 'Non-contact dimensional verification at micron-level accuracy. Flatness, roundness, gap and flush, thread profiles, SPC.',
-      excerptRo: 'Verificare dimensională fără contact la precizie de nivel micron. Planeitate, rotunjime, joc și flush, profile de filete, SPC.'
-    },
-    {
       title: 'Identification & Tracking',
       titleRo: 'Identificare & Urmărire',
       url: '/services/identification-tracking.html',
@@ -69,8 +62,8 @@
       title: 'Automotive',
       titleRo: 'Auto',
       url: '/services/industries.html',
-      excerpt: 'Body panel inspection, weld quality, fastener checks, safety components, robot guidance for assembly — IATF 16949 compliant.',
-      excerptRo: 'Inspecție caroserie, calitate suduri, verificare elemente de fixare, componente de siguranță — conform IATF 16949.'
+      excerpt: 'Body panel inspection, weld quality, fastener checks, safety components, robot guidance for assembly cells.',
+      excerptRo: 'Inspecție caroserie, calitate suduri, verificare elemente de fixare, componente de siguranță, ghidare robotică pentru celule de asamblare.'
     },
     {
       title: 'Electronics Manufacturing',
@@ -203,7 +196,8 @@
         return;
       }
 
-      var lang = getLang();
+      /* Auto-detect Romanian diacritics in query; fall back to UI lang */
+      var lang = /[ăâîșțĂÂÎȘȚ]/.test(q) ? 'ro' : getLang();
       var hits = fuse.search(q, { limit: 7 });
       positionDropdown();
 

@@ -298,9 +298,10 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
       if(val!==null)el.innerHTML=val;
     });
     document.documentElement.lang=lang==='ro'?'ro':'en';
+    try{localStorage.setItem('lang',lang);}catch(e){}
   }
   window.setLang=setLang;
-  setLang(currentLang);
+  setLang(localStorage.getItem('lang')||'en');
   var header=document.getElementById('site-header');
   function updateHeader(){header.classList.toggle('shrunk',window.scrollY>80);}
   window.addEventListener('scroll',updateHeader,{passive:true});

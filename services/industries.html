@@ -140,7 +140,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
       <div class="ind-body">
         <div>
           <p data-en="The automotive sector demands zero-defect manufacturing at high volumes. Safety-critical components must be inspected 100% — there is no sampling, no margin for error." data-ro="Sectorul auto necesită fabricație zero-defecte la volume mari. Componentele critice pentru siguranță trebuie inspectate 100% — nu există eșantionare, nu există marjă de eroare.">The automotive sector demands zero-defect manufacturing at high volumes. Safety-critical components must be inspected 100% — there is no sampling, no margin for error.</p>
-          <p data-en="Opsistech systems operate within IATF 16949 quality frameworks, delivering full traceability, SPC integration, and audit-ready data for every part inspected." data-ro="Sistemele Opsistech operează în cadrul standardelor de calitate IATF 16949, oferind trasabilitate completă, integrare SPC și date pregătite pentru audit pentru fiecare piesă inspectată.">Opsistech systems operate within IATF 16949 quality frameworks, delivering full traceability, SPC integration, and audit-ready data for every part inspected.</p>
+          <p data-en="Opsistech systems deliver full traceability, SPC integration, and audit-ready data for every part inspected." data-ro="Sistemele Opsistech oferă trasabilitate completă, integrare SPC și date pregătite pentru audit pentru fiecare piesă inspectată.">Opsistech systems deliver full traceability, SPC integration, and audit-ready data for every part inspected.</p>
         </div>
         <ul class="use-cases">
           <li data-en="Body panel surface inspection" data-ro="Inspecția suprafeței caroseriei">Body panel surface inspection</li>
@@ -245,10 +245,6 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3 data-en="Robot Guidance" data-ro="Ghidare Robotică">Robot Guidance</h3>
         <p data-en="Vision-guided picking, placing, and assembly." data-ro="Preluare, plasare și asamblare ghidate vizual.">Vision-guided picking, placing, and assembly.</p>
       </a>
-      <a href="./measurement-metrology.html" class="related-item">
-        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
-        <p data-en="Non-contact dimensional verification." data-ro="Verificare dimensională fără contact.">Non-contact dimensional verification.</p>
-      </a>
       <a href="./identification-tracking.html" class="related-item">
         <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
         <p data-en="Barcodes, QR codes, and full traceability." data-ro="Coduri de bare, QR și trasabilitate completă.">Barcodes, QR codes, and full traceability.</p>
@@ -304,9 +300,10 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
       if(val!==null)el.innerHTML=val;
     });
     document.documentElement.lang=lang==='ro'?'ro':'en';
+    try{localStorage.setItem('lang',lang);}catch(e){}
   }
   window.setLang=setLang;
-  setLang(currentLang);
+  setLang(localStorage.getItem('lang')||'en');
   var header=document.getElementById('site-header');
   function updateHeader(){header.classList.toggle('shrunk',window.scrollY>80);}
   window.addEventListener('scroll',updateHeader,{passive:true});

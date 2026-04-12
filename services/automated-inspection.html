@@ -240,9 +240,9 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3 data-en="AI-Based Analysis" data-ro="Analiză Bazată pe IA">AI-Based Analysis</h3>
         <p data-en="Deep learning for complex defects beyond rule-based methods." data-ro="Deep learning pentru defecte complexe dincolo de metodele bazate pe reguli.">Deep learning for complex defects beyond rule-based methods.</p>
       </a>
-      <a href="./measurement-metrology.html" class="related-item">
-        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
-        <p data-en="High-precision dimensional verification at micron-level accuracy." data-ro="Verificare dimensională de înaltă precizie la nivel de micron.">High-precision dimensional verification at micron-level accuracy.</p>
+      <a href="./robot-guidance.html" class="related-item">
+        <h3 data-en="Robot Guidance" data-ro="Ghidare Robotică">Robot Guidance</h3>
+        <p data-en="Vision-guided picking, placing, and assembly for robotic cells." data-ro="Preluare, plasare și asamblare ghidate vizual pentru celule robotice.">Vision-guided picking, placing, and assembly for robotic cells.</p>
       </a>
       <a href="./identification-tracking.html" class="related-item">
         <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
@@ -291,9 +291,10 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
       if(val!==null)el.innerHTML=val;
     });
     document.documentElement.lang=lang==='ro'?'ro':'en';
+    try{localStorage.setItem('lang',lang);}catch(e){}
   }
   window.setLang=setLang;
-  setLang(currentLang);
+  setLang(localStorage.getItem('lang')||'en');
   var header=document.getElementById('site-header');
   function updateHeader(){header.classList.toggle('shrunk',window.scrollY>80);}
   window.addEventListener('scroll',updateHeader,{passive:true});
