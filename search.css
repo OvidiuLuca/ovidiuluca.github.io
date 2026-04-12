@@ -1,5 +1,6 @@
-/* ── Search toggle in nav ── */
+/* ── Lens toggle ── */
 nav { position: relative; }
+
 .search-toggle {
   position: absolute;
   right: 40px;
@@ -9,144 +10,148 @@ nav { position: relative; }
   border: none;
   cursor: pointer;
   padding: 4px;
+  color: var(--mid);
   display: flex;
   align-items: center;
-  color: var(--black);
   opacity: 0.7;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.4s;
 }
 .search-toggle:hover { opacity: 1; }
 
-/* On index hero — icon turns white before scroll */
+/* White lens on home hero before scroll */
 .home-page header:not(.scrolled) .search-toggle { color: var(--white); opacity: 0.88; }
-.home-page header:not(.scrolled) .search-toggle:hover { opacity: 1; }
 
-/* ── Overlay ── */
-.search-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 300;
-  background: rgba(10,10,10,0.97);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 100px 40px 60px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-}
-.search-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* ── Inner container ── */
-.search-inner {
-  width: 100%;
-  max-width: 700px;
-  position: relative;
-}
-
-/* ── Close button ── */
-.search-x {
+/* ── Inline search bar ── */
+.search-bar-wrap {
   position: absolute;
-  top: -60px;
-  right: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  padding: 8px 0;
-  transition: color 0.2s;
-}
-.search-x:hover { color: var(--white); }
-
-/* ── Input row ── */
-.search-input-wrap {
+  left: 40px;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  margin-bottom: 40px;
-  gap: 16px;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
 }
-.search-input-wrap svg { flex-shrink: 0; color: rgba(255,255,255,0.3); }
-.search-input {
+
+.search-bar-input {
   flex: 1;
   background: none;
   border: none;
+  border-bottom: 1px solid var(--line);
   outline: none;
-  font-family: "Instrument Serif", serif;
-  font-size: clamp(28px, 4vw, 48px);
-  color: var(--white);
-  padding: 16px 0;
-  caret-color: var(--white);
-}
-.search-input::placeholder { color: rgba(255,255,255,0.2); }
-
-/* ── Results ── */
-.search-results { list-style: none; width: 100%; }
-
-.search-result-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
-.search-result-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
-
-.search-result-item a {
-  display: block;
-  padding: 20px 0;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.search-result-item a:hover { opacity: 0.65; }
-
-.sr-title {
-  font-family: "Instrument Serif", serif;
-  font-size: 22px;
-  color: var(--white);
-  margin-bottom: 4px;
-  font-weight: 400;
-}
-.sr-desc {
+  font-family: "Instrument Sans", sans-serif;
   font-size: 13px;
-  color: rgba(255,255,255,0.4);
-  line-height: 1.55;
-}
-
-.search-hint {
-  font-size: 12px;
-  color: rgba(255,255,255,0.2);
-  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
   letter-spacing: 1px;
-  padding-top: 4px;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 4px 0;
+  caret-color: var(--black);
 }
-
-.search-empty {
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 14px;
-  color: rgba(255,255,255,0.35);
-  padding: 24px 0;
+.search-bar-input::placeholder {
+  color: var(--mid);
+  opacity: 0.5;
+  text-transform: none;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
-/* ── Keyboard hint ── */
-.search-kbd {
-  display: inline-block;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 10px;
-  letter-spacing: 1px;
-  color: rgba(255,255,255,0.25);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-left: 8px;
-  vertical-align: middle;
+/* White variant on home hero */
+.home-page header:not(.scrolled) .search-bar-input {
+  color: var(--white);
+  border-bottom-color: rgba(255,255,255,0.3);
+}
+.home-page header:not(.scrolled) .search-bar-input::placeholder {
+  color: rgba(255,255,255,0.5);
 }
 
-@media(max-width:600px) {
+.search-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--mid);
+  padding: 4px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.search-close-btn:hover { color: var(--black); }
+.home-page header:not(.scrolled) .search-close-btn { color: rgba(255,255,255,0.5); }
+.home-page header:not(.scrolled) .search-close-btn:hover { color: var(--white); }
+
+/* ── Active state ── */
+nav > a { transition: opacity 0.15s; }
+
+nav.search-active > a {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+nav.search-active .search-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+nav.search-active .search-bar-wrap {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Results dropdown ── */
+.search-dropdown {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  z-index: 99;
+  display: none;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.search-dropdown.open { display: block; }
+
+.search-dropdown-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.search-result-list { list-style: none; }
+
+.search-result-item { border-bottom: 1px solid var(--line); }
+.search-result-item:last-child { border-bottom: none; }
+
+.search-result-item a {
+  display: block;
+  padding: 16px 0;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.search-result-item a:hover { opacity: 0.6; }
+
+.sr-title {
+  font-family: "Instrument Serif", serif;
+  font-size: 18px;
+  color: var(--black);
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+.sr-desc { font-size: 13px; color: var(--mid); line-height: 1.55; }
+
+.search-empty {
+  list-style: none;
+  padding: 20px 0;
+  font-size: 13px;
+  color: var(--mid);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
   .search-toggle { right: 24px; }
-  .search-overlay { padding: 80px 24px 40px; }
-  .search-x { top: -48px; }
+  .search-bar-wrap { left: 24px; right: 56px; }
+  .search-dropdown-inner { padding: 0 24px; }
 }

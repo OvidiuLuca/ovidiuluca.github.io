@@ -106,62 +106,78 @@
     return document.documentElement.lang === 'ro' ? 'ro' : 'en';
   }
 
-  /* ── Build overlay ── */
-  var overlay = document.createElement('div');
-  overlay.id = 'search-overlay';
-  overlay.className = 'search-overlay';
-  overlay.setAttribute('aria-hidden', 'true');
-  overlay.innerHTML =
-    '<div class="search-inner">' +
-      '<button class="search-x" id="search-close">Close &times;</button>' +
-      '<div class="search-input-wrap">' +
-        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
-          '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>' +
-        '</svg>' +
-        '<input type="text" id="search-input" class="search-input" autocomplete="off" spellcheck="false">' +
-      '</div>' +
-      '<ul id="search-results" class="search-results"></ul>' +
+  /* ── Inject inline bar into nav ── */
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+
+  var barWrap = document.createElement('div');
+  barWrap.className = 'search-bar-wrap';
+  barWrap.innerHTML =
+    '<input type="text" class="search-bar-input" id="search-bar-input" autocomplete="off" spellcheck="false">' +
+    '<button class="search-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>';
+  nav.appendChild(barWrap);
+
+  /* ── Results dropdown (appended to body) ── */
+  var dropdown = document.createElement('div');
+  dropdown.className = 'search-dropdown';
+  dropdown.innerHTML =
+    '<div class="search-dropdown-inner">' +
+      '<ul class="search-result-list" id="search-result-list"></ul>' +
     '</div>';
-  document.body.appendChild(overlay);
+  document.body.appendChild(dropdown);
 
-  /* ── Set placeholder based on lang ── */
+  var input = document.getElementById('search-bar-input');
+  var closeBtn = document.getElementById('search-close-btn');
+  var resultList = document.getElementById('search-result-list');
+
+  /* ── Position dropdown flush below header ── */
+  function positionDropdown() {
+    var header = document.querySelector('header');
+    if (header) {
+      dropdown.style.top = header.getBoundingClientRect().bottom + 'px';
+    }
+  }
+
+  /* ── Update placeholder for current lang ── */
   function updatePlaceholder() {
-    var inp = document.getElementById('search-input');
-    if (inp) inp.placeholder = getLang() === 'ro' ? 'Caută…' : 'Search…';
+    input.placeholder = getLang() === 'ro' ? 'Caută…' : 'Search…';
   }
 
-  /* ── Open / close ── */
+  /* ── Open search bar ── */
   function openSearch() {
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
     updatePlaceholder();
-    var inp = document.getElementById('search-input');
-    if (inp) { inp.value = ''; inp.focus(); }
-    var res = document.getElementById('search-results');
-    if (res) res.innerHTML = '';
+    nav.classList.add('search-active');
+    positionDropdown();
+    /* Double rAF ensures the opacity transition has started before focus() */
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        input.focus();
+      });
+    });
   }
 
+  /* ── Close search bar ── */
   function closeSearch() {
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    nav.classList.remove('search-active');
+    dropdown.classList.remove('open');
+    input.value = '';
+    resultList.innerHTML = '';
   }
 
-  /* ── Toggle button ── */
+  /* ── Lens button opens bar ── */
   var toggleBtn = document.getElementById('search-toggle');
   if (toggleBtn) toggleBtn.addEventListener('click', openSearch);
 
-  /* ── Close on background click or ESC ── */
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeSearch(); });
+  /* ── × button closes bar ── */
+  closeBtn.addEventListener('click', closeSearch);
+
+  /* ── ESC closes; Ctrl/Cmd+K opens ── */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeSearch();
     if (e.key === 'k' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
   });
 
-  document.getElementById('search-close').addEventListener('click', closeSearch);
-
-  /* ── Load Fuse.js then wire up search ── */
+  /* ── Load Fuse.js then wire live search ── */
   var fuseScript = document.createElement('script');
   fuseScript.src = 'https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js';
   fuseScript.onload = function () {
@@ -178,22 +194,25 @@
       minMatchCharLength: 2
     });
 
-    var input = document.getElementById('search-input');
-    var results = document.getElementById('search-results');
-
     input.addEventListener('input', function () {
       var q = input.value.trim();
-      results.innerHTML = '';
-      if (!q) return;
+      resultList.innerHTML = '';
+
+      if (!q) {
+        dropdown.classList.remove('open');
+        return;
+      }
 
       var lang = getLang();
       var hits = fuse.search(q, { limit: 7 });
+      positionDropdown();
 
       if (!hits.length) {
         var empty = document.createElement('li');
         empty.className = 'search-empty';
         empty.textContent = lang === 'ro' ? 'Niciun rezultat.' : 'No results found.';
-        results.appendChild(empty);
+        resultList.appendChild(empty);
+        dropdown.classList.add('open');
         return;
       }
 
@@ -208,8 +227,10 @@
           '<div class="sr-desc">' + (lang === 'ro' ? item.excerptRo : item.excerpt) + '</div>';
         a.addEventListener('click', closeSearch);
         li.appendChild(a);
-        results.appendChild(li);
+        resultList.appendChild(li);
       });
+
+      dropdown.classList.add('open');
     });
 
   };
