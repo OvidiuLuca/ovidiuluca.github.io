@@ -41,8 +41,8 @@
       title: 'Dimensional Measurement',
       titleRo: 'Măsurare Dimensională',
       url: '/services/dimensional-measurement.html',
-      excerpt: '3D scanning, dimensional inspection, GD&T verification, and assembly verification. Micron-level accuracy with first-article inspection reports.',
-      excerptRo: 'Scanare 3D, inspecție dimensională, verificare GD&T și verificare asamblare. Precizie la nivel de micron cu rapoarte de inspecție a primei piese.'
+      excerpt: '3D scanning, dimensional inspection, GD&T verification, assembly checks, and in-process measurement. Micron-level accuracy with full deviation reporting.',
+      excerptRo: 'Scanare 3D, inspecție dimensională, verificare GD&T, verificări de asamblare și măsurare în proces. Precizie la nivel de micron cu raportare completă a abaterilor.'
     },
     {
       title: 'Identification & Tracking',
