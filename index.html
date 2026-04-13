@@ -34,6 +34,7 @@
   gtag('config', 'G-T4KCQH1Z2Z');
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="search.css">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -129,7 +130,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 }
 </style>
 </head>
-<body>
+<body class="home-page">
 
 <header id="site-header">
   <div class="site-wordmark">
@@ -142,6 +143,9 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     <a href="#about"    data-en="About"    data-ro="Despre">About</a>
     <a href="#services" data-en="Services" data-ro="Servicii">Services</a>
     <a href="#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
+    <button id="search-toggle" class="search-toggle" aria-label="Search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
   </nav>
 </header>
 
@@ -167,7 +171,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
            data-ro="De la inspecție automatizată și măsurare de înaltă precizie, până la ghidarea roboților și urmărire inteligentă, sistemele funcționează impecabil în condiții industriale reale — cu viteză, la scară și sub presiune.">
           From automated inspection and high-accuracy measurement to robot guidance and intelligent tracking, systems operate seamlessly in real-world industrial conditions — at speed, at scale, and under pressure.</p>
         <p data-en="The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required."
-           data-ro="Principiul călăuzitor rămâne simplu: cea mai bună tehnologie este invizibilă. Pur și simplu funcționează — constant, eficient și exact cum este necesar.">
+           data-ro="Principiul fundamental rămâne simplu: cea mai bună tehnologie este invizibilă. Pur și simplu funcționează — constant, eficient și exact cum este necesar.">
           The guiding principle remains simple: the best technology is invisible. It simply works — consistently, efficiently, and exactly as required.</p>
       </div>
       <ul class="values">
@@ -198,42 +202,36 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     <p class="s-label" data-en="What We Do" data-ro="Ce Facem">What We Do</p>
     <h2 class="s-title" data-en="Services" data-ro="Servicii">Services</h2>
     <div class="svc-grid">
-      <div class="svc-item">
+      <a href="services/automated-inspection.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="Automated Inspection" data-ro="Inspecție Automatizată">Automated Inspection</h3>
         <p  data-en="Detection of defects such as scratches, incorrect shapes, missing components, faulty electronics, and damaged packaging.<br>Replacement of manual inspection on production lines."
             data-ro="Detectarea defectelor precum zgârieturi, forme incorecte, componente lipsă, electronică defectă și ambalaje deteriorate.<br>Înlocuirea inspecției manuale pe liniile de producție.">
           Detection of defects such as scratches, incorrect shapes, missing components, faulty electronics, and damaged packaging.<br>Replacement of manual inspection on production lines.</p>
-      </div>
-      <div class="svc-item">
+      </a>
+      <a href="services/robot-guidance.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="Robot Guidance" data-ro="Ghidare Robotică">Robot Guidance</h3>
         <p  data-en="Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation."
             data-ro="Localizare și preluare precisă a obiectelor.<br>Potrivit pentru bin picking, asamblare auto și automatizarea logisticii.">
           Accurate localisation and picking of objects.<br>Suitable for bin picking, automotive assembly, and logistics automation.</p>
-      </div>
-      <div class="svc-item">
-        <h3 data-en="Measurement &amp; Metrology" data-ro="Măsurare &amp; Metrologie">Measurement &amp; Metrology</h3>
-        <p  data-en="High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications."
-            data-ro="Măsurare dimensională de înaltă precizie la nivel de micron.<br>Verificarea conformității pieselor cu specificațiile tehnice.">
-          High-precision dimensional measurement at micron-level accuracy.<br>Verification of part compliance with technical specifications.</p>
-      </div>
-      <div class="svc-item">
+      </a>
+      <a href="services/identification-tracking.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
         <p  data-en="Reading of barcodes, QR codes, and serial numbers.<br>End-to-end product tracking across production and supply chains."
             data-ro="Citirea codurilor de bare, codurilor QR și numerelor de serie.<br>Urmărirea completă a produselor pe tot parcursul producției și al lanțului de aprovizionare.">
           Reading of barcodes, QR codes, and serial numbers.<br>End-to-end product tracking across production and supply chains.</p>
-      </div>
-      <div class="svc-item">
+      </a>
+      <a href="services/ai-analysis.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="AI-Based Analysis" data-ro="Analiză Bazată pe IA">AI-Based Analysis</h3>
         <p  data-en="Deep learning-based detection of complex patterns, subtle defects, and object classification beyond traditional rule-based methods."
             data-ro="Detectarea bazată pe deep learning a tiparelor complexe, defectelor subtile și clasificarea obiectelor, depășind metodele tradiționale bazate pe reguli.">
           Deep learning-based detection of complex patterns, subtle defects, and object classification beyond traditional rule-based methods.</p>
-      </div>
-      <div class="svc-item">
+      </a>
+      <a href="services/industries.html" class="svc-item" style="text-decoration:none;display:block;">
         <h3 data-en="Industries Served" data-ro="Industrii Deservite">Industries Served</h3>
         <p  data-en="Automotive.<br>Electronics.<br>Food &amp; beverage.<br>Logistics.<br>Pharmaceuticals."
             data-ro="Auto.<br>Electronică.<br>Alimentar &amp; băuturi.<br>Logistică.<br>Farmaceutică.">
           Automotive.<br>Electronics.<br>Food &amp; beverage.<br>Logistics.<br>Pharmaceuticals.</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -296,6 +294,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   </div>
 </footer>
 
+<script src="search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 (function() {
@@ -332,13 +331,15 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 
     // Update <html lang>
     document.documentElement.lang = lang === 'ro' ? 'ro' : 'en';
+    // Persist choice across pages
+    try { localStorage.setItem('lang', lang); } catch(e) {}
   }
 
   // Expose globally for onclick
   window.setLang = setLang;
 
-  // Apply saved language on load
-  setLang(currentLang);
+  // Apply saved language on load (default: English)
+  setLang(localStorage.getItem('lang') || 'en');
 
   /* ── EmailJS ── */
   emailjs.init('hGRXPG-mP7R1Pvs8m');
