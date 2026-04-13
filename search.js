@@ -38,6 +38,13 @@
       excerptRo: 'Robotică ghidată vizual pentru bin picking, asamblare și logistică. Estimare de poziție 2D și 3D pentru toți marii producători de roboți.'
     },
     {
+      title: 'Measurement & Metrology',
+      titleRo: 'Măsurare & Metrologie',
+      url: '/services/measurement-metrology.html',
+      excerpt: '3D scanning, dimensional inspection, GD&T verification, and CAD comparison. Micron-level accuracy with first-article inspection reports.',
+      excerptRo: 'Scanare 3D, inspecție dimensională, verificare GD&T și comparare cu CAD. Precizie la nivel de micron cu rapoarte de inspecție a primei piese.'
+    },
+    {
       title: 'Identification & Tracking',
       titleRo: 'Identificare & Urmărire',
       url: '/services/identification-tracking.html',
