@@ -7,6 +7,7 @@
 <meta name="geo.region" content="RO" />
     <meta name="geo.placename" content="Romania" />
     <meta name="description" content="Opsistech - Soluții avansate de Machine Vision și automatizări industriale în România. Inspecție vizuală și controlul calității." />
+    <meta name="google-site-verification" content="hXrhn_1LjPjrjeQ3AvN4jO3GxaLJIf-rsLX9IN3ecv0" />
     <link rel="alternate" hreflang="ro-ro" href="https://opsistech.ro/" />
     
     <script type="application/ld+json">
@@ -33,8 +34,12 @@
 
   gtag('config', 'G-T4KCQH1Z2Z');
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="search.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="search.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="search.css"></noscript>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -45,7 +50,6 @@
   --line:  #e2e2de;
 }
 html { scroll-behavior: smooth; }
-<meta name="google-site-verification" content="hXrhn_1LjPjrjeQ3AvN4jO3GxaLJIf-rsLX9IN3ecv0" />
 body { font-family: "Instrument Sans", sans-serif; color: var(--black); background: var(--white); font-size: 16px; line-height: 1.6; }
 header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: background 0.4s ease, box-shadow 0.4s ease; padding-top: env(safe-area-inset-top, 0px); }
 header.scrolled { background: var(--white); box-shadow: 0 1px 0 var(--line); }
@@ -110,7 +114,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
 .f-links { display: flex; gap: 32px; }
 .f-links a { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
 .f-links a:hover { color: var(--black); }
-.f-copy { font-size: 12px; color: #b0b0aa; }
+.f-copy { font-size: 12px; color: var(--mid); }
 @media (max-width: 800px) {
   .about-cols, .contact-cols { grid-template-columns: 1fr; gap: 40px; }
   .svc-grid { grid-template-columns: repeat(3, 1fr); }
@@ -262,13 +266,13 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
         </div>
       </div>
       <form class="form" id="contact-form">
-        <label data-en="Name"    data-ro="Nume">Name</label>
+        <label for="f-name"    data-en="Name"    data-ro="Nume">Name</label>
         <input type="text"  id="f-name"    data-placeholder-en="Your name"           data-placeholder-ro="Numele dvs."         placeholder="Your name"           maxlength="100">
-        <label data-en="Email"   data-ro="Email">Email</label>
+        <label for="f-email"   data-en="Email"   data-ro="Email">Email</label>
         <input type="email" id="f-email"   data-placeholder-en="your@email.com"       data-placeholder-ro="email@dvs.com"        placeholder="your@email.com"       maxlength="200">
-        <label data-en="Phone"   data-ro="Telefon">Phone</label>
+        <label for="f-phone"   data-en="Phone"   data-ro="Telefon">Phone</label>
         <input type="tel"   id="f-phone"   data-placeholder-en="Your phone number"    data-placeholder-ro="Numărul dvs. de telefon" placeholder="Your phone number" maxlength="20">
-        <label data-en="Message" data-ro="Mesaj">Message</label>
+        <label for="f-message" data-en="Message" data-ro="Mesaj">Message</label>
         <textarea id="f-message" data-placeholder-en="Tell us about your project..." data-placeholder-ro="Spuneți-ne despre proiectul dvs..." placeholder="Tell us about your project..." maxlength="2000"></textarea>
         <button type="submit" id="send-btn" data-en="Send Message" data-ro="Trimite Mesaj">Send Message</button>
         <p style="font-size:12px;color:var(--mid);margin-top:16px;margin-bottom:0;line-height:1.5;">
@@ -292,7 +296,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     <a href="#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
   </div>
   <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
-    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="privacy.html" style="color:#b0b0aa;text-decoration:none;" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a></div>
+    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="privacy.html" style="color:var(--mid);text-decoration:none;" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a></div>
     <div class="lang-switcher">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn"        id="btn-ro" onclick="setLang('ro')">RO</button>
@@ -300,8 +304,7 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   </div>
 </footer>
 
-<script src="search.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script defer src="search.js"></script>
 <script>
 (function() {
 
@@ -347,8 +350,22 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
   // Apply saved language on load (default: English)
   setLang(localStorage.getItem('lang') || 'en');
 
-  /* ── EmailJS ── */
-  emailjs.init('hGRXPG-mP7R1Pvs8m');
+  /* ── EmailJS lazy loader ── */
+  var _ejsLoaded = false, _ejsLoading = false, _ejsQueue = [];
+  function withEmailJS(cb) {
+    if (_ejsLoaded) { cb(); return; }
+    _ejsQueue.push(cb);
+    if (_ejsLoading) return;
+    _ejsLoading = true;
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    s.onload = function() {
+      emailjs.init('hGRXPG-mP7R1Pvs8m');
+      _ejsLoaded = true; _ejsLoading = false;
+      _ejsQueue.forEach(function(f) { f(); }); _ejsQueue = [];
+    };
+    document.head.appendChild(s);
+  }
 
   var addr = ['support', 'opsistech.ro'].join('@');
   var cel = document.getElementById('contact-email');
@@ -413,29 +430,31 @@ footer { border-top: 1px solid var(--line); padding: 40px; display: flex; justif
     btn.disabled = true;
     lastSent = now;
 
-    emailjs.send('service_49dntx2', 'template_rut1ctu', {
-      name:    name,
-      email:   email,
-      phone:   phone,
-      message: message
-    }).then(function() {
-      btn.textContent = msgs.sent[currentLang];
-      btn.style.background = '#2a7a2a';
-      form.reset();
-      setTimeout(function() {
-        btn.textContent = msgs.default[currentLang];
-        btn.style.background = '';
+    withEmailJS(function() {
+      emailjs.send('service_49dntx2', 'template_rut1ctu', {
+        name:    name,
+        email:   email,
+        phone:   phone,
+        message: message
+      }).then(function() {
+        btn.textContent = msgs.sent[currentLang];
+        btn.style.background = '#2a7a2a';
+        form.reset();
+        setTimeout(function() {
+          btn.textContent = msgs.default[currentLang];
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, function() {
+        btn.textContent = msgs.failed[currentLang];
+        btn.style.background = '#a02020';
         btn.disabled = false;
-      }, 3000);
-    }, function() {
-      btn.textContent = msgs.failed[currentLang];
-      btn.style.background = '#a02020';
-      btn.disabled = false;
-      lastSent = 0;
-      setTimeout(function() {
-        btn.textContent = msgs.default[currentLang];
-        btn.style.background = '';
-      }, 3000);
+        lastSent = 0;
+        setTimeout(function() {
+          btn.textContent = msgs.default[currentLang];
+          btn.style.background = '';
+        }, 3000);
+      });
     });
   });
 
