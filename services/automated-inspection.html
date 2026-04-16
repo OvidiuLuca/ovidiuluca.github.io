@@ -21,8 +21,12 @@
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
-<link rel="stylesheet" href="../search.css">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../search.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="../search.css"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{--black:#0a0a0a;--white:#ffffff;--gray:#f4f4f2;--mid:#6b6b6b;--line:#e2e2de;}
@@ -88,7 +92,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 .f-links{display:flex;gap:32px;}
 .f-links a{font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
 .f-links a:hover{color:var(--black);}
-.f-copy{font-size:12px;color:#b0b0aa;}
+.f-copy{font-size:12px;color:var(--mid);}
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 </style>
@@ -270,7 +274,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
     <a href="../#contact"  data-en="Contact"  data-ro="Contact">Contact</a>
   </div>
   <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
-    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="../privacy.html" style="color:#b0b0aa;text-decoration:none;" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a></div>
+    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="../privacy.html" style="color:var(--mid);text-decoration:none;" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a></div>
     <div class="lang-switcher">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn"        id="btn-ro" onclick="setLang('ro')">RO</button>
@@ -301,6 +305,6 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
   updateHeader();
 })();
 </script>
-<script src="../search.js"></script>
+<script defer src="../search.js"></script>
 </body>
 </html>
