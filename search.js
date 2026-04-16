@@ -113,7 +113,7 @@
   var barWrap = document.createElement('div');
   barWrap.className = 'search-bar-wrap';
   barWrap.innerHTML =
-    '<input type="text" class="search-bar-input" id="search-bar-input" autocomplete="off" spellcheck="false">' +
+    '<input type="text" class="search-bar-input" id="search-bar-input" aria-label="Search" autocomplete="off" spellcheck="false">' +
     '<button class="search-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>';
   nav.appendChild(barWrap);
 
