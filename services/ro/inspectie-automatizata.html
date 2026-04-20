@@ -106,6 +106,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 .f-copy{font-size:12px;color:var(--mid);}
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
+.lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
 </style>
 </head>
 <body>
@@ -121,7 +122,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
     <a href="../../#about">Despre</a>
     <a href="../../#services">Servicii</a>
     <a href="../../#contact">Contact</a>
-    <a href="../automated-inspection.html" style="font-size:11px;opacity:0.6;">EN</a>
+    <button id="search-toggle" class="search-toggle" aria-label="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
   </nav>
 </header>
 
@@ -284,10 +285,17 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
     <a href="../../#services">Servicii</a>
     <a href="../../#contact">Contact</a>
   </div>
-  <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="../../privacy.html" style="color:var(--mid);text-decoration:none;">Politica de Confidențialitate</a></div>
+  <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;">
+    <div class="f-copy">&copy; 2025 Opsistech &nbsp;·&nbsp; <a href="../../privacy.html" style="color:var(--mid);text-decoration:none;">Politica de Confidențialitate</a></div>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="btn-en" onclick="window.location='../automated-inspection.html'">EN</button>
+      <button class="lang-btn active" id="btn-ro">RO</button>
+    </div>
+  </div>
 </footer>
 
 <script>
+localStorage.setItem("lang","ro");
 (function(){
   var header=document.getElementById('site-header');
   function updateHeader(){header.classList.toggle('shrunk',window.scrollY>80);}
