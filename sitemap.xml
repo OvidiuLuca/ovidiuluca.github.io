@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://opsistech.ro/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/ro/"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/ro/"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,42 +29,108 @@
 
   <url>
     <loc>https://opsistech.ro/services/automated-inspection.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/automated-inspection.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/inspectie-automatizata.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/inspectie-automatizata.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/automated-inspection.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/inspectie-automatizata.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://opsistech.ro/services/robot-guidance.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/robot-guidance.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/ghidare-robotica.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/ghidare-robotica.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/robot-guidance.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/ghidare-robotica.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://opsistech.ro/services/dimensional-measurement.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/dimensional-measurement.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/masurare-dimensionala.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/masurare-dimensionala.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/dimensional-measurement.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/masurare-dimensionala.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://opsistech.ro/services/identification-tracking.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/identification-tracking.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/identificare-urmarire.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/identificare-urmarire.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/identification-tracking.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/identificare-urmarire.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://opsistech.ro/services/ai-analysis.html</loc>
-    <lastmod>2026-04-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/ai-analysis.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/analiza-ai.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/analiza-ai.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/ai-analysis.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/analiza-ai.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://opsistech.ro/services/industries.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/industries.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/industrii.html"/>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://opsistech.ro/services/ro/industrii.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://opsistech.ro/services/industries.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/industrii.html"/>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
