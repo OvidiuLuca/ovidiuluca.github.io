@@ -8,9 +8,21 @@
 <meta name="geo.region" content="RO" />
 <meta name="geo.placename" content="Romania" />
 <link rel="canonical" href="https://opsistech.ro/services/identification-tracking.html" />
+<link rel="preload" as="image" href="../images/identification-tracking-hero-1280.webp" media="(max-width:899px)">
+<link rel="preload" as="image" href="../images/identification-tracking-hero-2560.webp" media="(min-width:900px)">
 <link rel="alternate" hreflang="en" href="https://opsistech.ro/services/identification-tracking.html" />
 <link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/identificare-urmarire.html" />
 <link rel="alternate" hreflang="x-default" href="https://opsistech.ro/services/identification-tracking.html" />
+<meta property="og:title" content="Identification &amp; Tracking | Barcode, QR &amp; Traceability | Opsistech" />
+<meta property="og:description" content="Opsistech delivers vision-based barcode, QR code, and OCR reading systems for complete product traceability in Romania. End-to-end tracking across production and supply chains." />
+<meta property="og:url" content="https://opsistech.ro/services/identification-tracking.html" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Opsistech" />
+<meta property="og:image" content="https://opsistech.ro/images/identification-tracking-hero-1280.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Identification &amp; Tracking | Barcode, QR &amp; Traceability | Opsistech" />
+<meta name="twitter:description" content="Vision-based barcode, QR code, and OCR reading systems for complete product traceability in Romania." />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,6 +42,34 @@
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://opsistech.ro/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://opsistech.ro/#services" },
     { "@type": "ListItem", "position": 3, "name": "Identification & Tracking", "item": "https://opsistech.ro/services/identification-tracking.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What barcodes can industrial vision systems read?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modern systems read all standard 1D codes (Code 128, Code 39, EAN, UPC, Interleaved 2 of 5) and 2D codes (Data Matrix, QR Code, PDF417, Aztec, MaxiCode). We also work with DPM (Direct Part Marking) laser-engraved or dot-peened marks on metals, plastics, and components — even with low contrast or partial damage." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does OCR work on damaged or degraded labels?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Modern deep learning OCR can read printed text even with partial wear, low contrast, skew, or on curved surfaces. We train models specific to your fonts and conditions to maximise accuracy — sometimes outperforming classic template-based OCR in challenging industrial conditions." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does traceability data integrate with ERP/MES systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Reads are transmitted in real time to MES, ERP, or WMS systems via OPC UA, REST API, SQL databases, or XML/CSV files. We can generate traceability events (operation start, end, rejection), component genealogy, and per-batch production reports — integrated with SAP, Oracle, Siemens MES, or custom solutions." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum barcode reading speed on a production line?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modern industrial cameras read 100–500 codes per second, depending on code type, size, and print quality. For ultra-fast lines (bottles, blisters), we use line-scan cameras and synchronised multi-camera systems that process thousands of reads per minute — without slowing production." }
+    }
   ]
 }
 </script>
@@ -110,6 +150,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 .f-copy{font-size:12px;color:var(--mid);}
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -274,6 +321,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3 data-en="Industries Served" data-ro="Industrii Deservite">Industries Served</h3>
         <p data-en="See how traceability solutions are deployed across automotive, pharma, food, and logistics." data-ro="Vedeți cum sunt implementate soluțiile de trasabilitate în auto, farma, alimentar și logistică.">See how traceability solutions are deployed across automotive, pharma, food, and logistics.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">FAQ</p>
+    <h2 class="s-title">Frequently Asked Questions — Identification &amp; Tracking</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What barcodes can industrial vision systems read?</summary>
+        <p>Modern systems read all standard 1D codes (Code 128, Code 39, EAN, UPC, Interleaved 2 of 5) and 2D codes (Data Matrix, QR Code, PDF417, Aztec, MaxiCode). We also work with DPM (Direct Part Marking) laser-engraved or dot-peened marks on metals, plastics, and components — even with low contrast or partial damage.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does OCR work on damaged or degraded labels?</summary>
+        <p>Yes. Modern deep learning OCR can read printed text even with partial wear, low contrast, skew, or on curved surfaces. We train models specific to your fonts and conditions to maximise accuracy — sometimes outperforming classic template-based OCR in challenging industrial conditions.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does traceability data integrate with ERP/MES systems?</summary>
+        <p>Reads are transmitted in real time to MES, ERP, or WMS systems via OPC UA, REST API, SQL databases, or XML/CSV files. We can generate traceability events (operation start, end, rejection), component genealogy, and per-batch production reports — integrated with SAP, Oracle, Siemens MES, or custom solutions.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the maximum barcode reading speed on a production line?</summary>
+        <p>Modern industrial cameras read 100–500 codes per second, depending on code type, size, and print quality. For ultra-fast lines (bottles, blisters), we use line-scan cameras and synchronised multi-camera systems that process thousands of reads per minute — without slowing production.</p>
+      </details>
     </div>
   </div>
 </section>
