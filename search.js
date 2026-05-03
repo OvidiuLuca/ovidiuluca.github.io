@@ -143,6 +143,38 @@
     input.placeholder = getLang() === 'ro' ? 'Caută…' : 'Search…';
   }
 
+  /* ── Lazy Fuse.js loader — only downloads when search is opened ── */
+  var _fuse = null;
+  var _fuseCallbacks = [];
+  var _fuseLoading = false;
+
+  function ensureFuse(cb) {
+    if (_fuse) { cb(_fuse); return; }
+    _fuseCallbacks.push(cb);
+    if (_fuseLoading) return;
+    _fuseLoading = true;
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js';
+    s.onload = function () {
+      _fuse = new Fuse(SEARCH_DATA, {
+        keys: [
+          { name: 'title',     weight: 0.3 },
+          { name: 'titleRo',   weight: 0.3 },
+          { name: 'excerpt',   weight: 0.2 },
+          { name: 'excerptRo', weight: 0.2 }
+        ],
+        threshold: 0.4,
+        includeScore: true,
+        minMatchCharLength: 2
+      });
+      _fuseLoading = false;
+      var cbs = _fuseCallbacks;
+      _fuseCallbacks = [];
+      cbs.forEach(function (fn) { fn(_fuse); });
+    };
+    document.head.appendChild(s);
+  }
+
   /* ── Open search bar ── */
   function openSearch() {
     updatePlaceholder();
@@ -154,6 +186,8 @@
         input.focus();
       });
     });
+    /* Preload Fuse.js as soon as search opens so it's ready when user types */
+    ensureFuse(function () {});
   }
 
   /* ── Close search bar ── */
@@ -177,64 +211,53 @@
     if (e.key === 'k' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
   });
 
-  /* ── Load Fuse.js then wire live search ── */
-  var fuseScript = document.createElement('script');
-  fuseScript.src = 'https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js';
-  fuseScript.onload = function () {
+  /* ── Live search — Fuse loaded on demand ── */
+  input.addEventListener('input', function () {
+    var q = input.value.trim();
+    resultList.innerHTML = '';
 
-    var fuse = new Fuse(SEARCH_DATA, {
-      keys: [
-        { name: 'title',     weight: 0.3 },
-        { name: 'titleRo',   weight: 0.3 },
-        { name: 'excerpt',   weight: 0.2 },
-        { name: 'excerptRo', weight: 0.2 }
-      ],
-      threshold: 0.4,
-      includeScore: true,
-      minMatchCharLength: 2
-    });
+    if (!q) {
+      dropdown.classList.remove('open');
+      return;
+    }
 
-    input.addEventListener('input', function () {
-      var q = input.value.trim();
-      resultList.innerHTML = '';
+    /* Capture query at this moment; skip render if input changed by the time Fuse loads */
+    (function (query) {
+      ensureFuse(function (fuse) {
+        if (input.value.trim() !== query) return;
 
-      if (!q) {
-        dropdown.classList.remove('open');
-        return;
-      }
+        /* Auto-detect Romanian diacritics in query; fall back to UI lang */
+        var lang = /[ăâîșțĂÂÎȘȚ]/.test(query) ? 'ro' : getLang();
+        var hits = fuse.search(query, { limit: 7 });
+        positionDropdown();
+        resultList.innerHTML = '';
 
-      /* Auto-detect Romanian diacritics in query; fall back to UI lang */
-      var lang = /[ăâîșțĂÂÎȘȚ]/.test(q) ? 'ro' : getLang();
-      var hits = fuse.search(q, { limit: 7 });
-      positionDropdown();
+        if (!hits.length) {
+          var empty = document.createElement('li');
+          empty.className = 'search-empty';
+          empty.textContent = lang === 'ro' ? 'Niciun rezultat.' : 'No results found.';
+          resultList.appendChild(empty);
+          dropdown.classList.add('open');
+          return;
+        }
 
-      if (!hits.length) {
-        var empty = document.createElement('li');
-        empty.className = 'search-empty';
-        empty.textContent = lang === 'ro' ? 'Niciun rezultat.' : 'No results found.';
-        resultList.appendChild(empty);
+        hits.forEach(function (hit) {
+          var item = hit.item;
+          var li = document.createElement('li');
+          li.className = 'search-result-item';
+          var a = document.createElement('a');
+          a.href = resolveUrl(item.url);
+          a.innerHTML =
+            '<div class="sr-title">' + (lang === 'ro' ? item.titleRo : item.title) + '</div>' +
+            '<div class="sr-desc">' + (lang === 'ro' ? item.excerptRo : item.excerpt) + '</div>';
+          a.addEventListener('click', closeSearch);
+          li.appendChild(a);
+          resultList.appendChild(li);
+        });
+
         dropdown.classList.add('open');
-        return;
-      }
-
-      hits.forEach(function (hit) {
-        var item = hit.item;
-        var li = document.createElement('li');
-        li.className = 'search-result-item';
-        var a = document.createElement('a');
-        a.href = resolveUrl(item.url);
-        a.innerHTML =
-          '<div class="sr-title">' + (lang === 'ro' ? item.titleRo : item.title) + '</div>' +
-          '<div class="sr-desc">' + (lang === 'ro' ? item.excerptRo : item.excerpt) + '</div>';
-        a.addEventListener('click', closeSearch);
-        li.appendChild(a);
-        resultList.appendChild(li);
       });
-
-      dropdown.classList.add('open');
-    });
-
-  };
-  document.head.appendChild(fuseScript);
+    })(q);
+  });
 
 })();
