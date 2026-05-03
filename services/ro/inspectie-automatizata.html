@@ -44,6 +44,39 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cât costă un sistem de inspecție vizuală automată?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Costul variază în funcție de complexitatea aplicației, viteza liniei, numărul de camere și algoritmii necesari. Un sistem simplu cu o cameră poate porni de la câteva mii de euro, iar o soluție multi-cameră cu deep learning poate ajunge la zeci de mii. Oferim evaluare gratuită a aplicației înainte de orice estimare." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce defecte poate detecta un sistem de inspecție automată?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sistemele de machine vision detectează zgârieturi, fisuri, lovituri, decolorări, componente lipsă sau deformate, defecte de lipire pe PCB, etichete incorecte, integritatea sigiliilor și nivel de umplere. Pentru defecte complexe sau variabile, folosim deep learning care învață direct din imaginile produselor dvs." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cât durează implementarea unui sistem de inspecție vizuală?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O implementare tipică durează între 4 și 12 săptămâni, în funcție de complexitate. Etapele includ analiza aplicației, alegerea camerelor și iluminării, dezvoltarea algoritmilor, testarea pe linia dvs. de producție și instruirea operatorilor. Proiectele cu deep learning pot necesita timp suplimentar pentru antrenament." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce este inspecția optică automată (AOI)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "AOI (Automated Optical Inspection) este o categorie de machine vision dedicată inspecției plăcilor PCB și asamblării electronice. Folosește camere de mare rezoluție și iluminare specializată pentru a detecta defecte de lipire, componente lipsă sau nealiniate, polaritate inversată și alte probleme tipice producției electronice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Poate înlocui un sistem automat operatorii umani de inspecție?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pentru inspecții repetitive, de mare volum sau care necesită precizie consistentă, sistemele automate sunt superioare operatorilor umani — nu obosesc, lucrează 24/7 și oferă rezultate consistente. Operatorii rămân esențiali pentru calibrare și mentenanță, dar timpul lor este redirecționat către activități cu valoare adăugată mai mare." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +151,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -148,7 +188,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Inspecție Automatizată</h2>
-  <p class="hero-sub">Detectarea defectelor, constantă și la viteză mare — 24 de ore pe zi, 7 zile pe săptămână, fără oboseală.</p>
+  <p class="hero-sub">Sisteme de inspecție vizuală automată pentru detectare defecte și controlul calității pe linia de producție — 24/7, fără oboseală.</p>
 </section>
 
 <section class="gray">
@@ -261,7 +301,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="gray">
   <div class="s-wrap">
     <p class="s-label">Servicii Conexe</p>
-    <h2 class="s-title">Explorați Mai Mult</h2>
+    <h2 class="s-title">Alte Servicii Machine Vision</h2>
     <div class="related-grid">
       <a href="./analiza-ai.html" class="related-item">
         <h3>Analiză Bazată pe IA</h3>
@@ -275,6 +315,35 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Identificare &amp; Urmărire</h3>
         <p>Citirea codurilor de bare, QR și a numerelor de serie pentru trasabilitate completă.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Inspecție Vizuală Automată</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Cât costă un sistem de inspecție vizuală automată?</summary>
+        <p>Costul variază în funcție de complexitatea aplicației, viteza liniei, numărul de camere și algoritmii necesari. Un sistem simplu cu o cameră poate porni de la câteva mii de euro, iar o soluție multi-cameră cu deep learning poate ajunge la zeci de mii. Oferim evaluare gratuită a aplicației înainte de orice estimare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ce defecte poate detecta un sistem de inspecție automată?</summary>
+        <p>Sistemele de machine vision detectează zgârieturi, fisuri, lovituri, decolorări, componente lipsă sau deformate, defecte de lipire pe PCB, etichete incorecte, integritatea sigiliilor și nivel de umplere. Pentru defecte complexe sau variabile, folosim deep learning care învață direct din imaginile produselor dvs.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cât durează implementarea unui sistem de inspecție vizuală?</summary>
+        <p>O implementare tipică durează între 4 și 12 săptămâni, în funcție de complexitate. Etapele includ analiza aplicației, alegerea camerelor și iluminării, dezvoltarea algoritmilor, testarea pe linia dvs. de producție și instruirea operatorilor. Proiectele cu deep learning pot necesita timp suplimentar pentru antrenament.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ce este inspecția optică automată (AOI)?</summary>
+        <p>AOI (Automated Optical Inspection) este o categorie de machine vision dedicată inspecției plăcilor PCB și asamblării electronice. Folosește camere de mare rezoluție și iluminare specializată pentru a detecta defecte de lipire, componente lipsă sau nealiniate, polaritate inversată și alte probleme tipice producției electronice.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Poate înlocui un sistem automat operatorii umani de inspecție?</summary>
+        <p>Pentru inspecții repetitive, de mare volum sau care necesită precizie consistentă, sistemele automate sunt superioare operatorilor umani — nu obosesc, lucrează 24/7 și oferă rezultate consistente. Operatorii rămân esențiali pentru calibrare și mentenanță, dar timpul lor este redirecționat către activități cu valoare adăugată mai mare.</p>
+      </details>
     </div>
   </div>
 </section>

@@ -44,6 +44,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce este bin picking-ul vizual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bin picking-ul vizual este capacitatea unui robot ghidat de cameră de a localiza și prelua piese aranjate aleator într-un container. Folosind viziune 2D sau 3D, sistemul calculează poziția și orientarea fiecărei piese, evită coliziunile și transmite robotului coordonatele exacte de prindere — eliminând nevoia de alimentatoare mecanice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce roboți pot fi ghidați prin viziune artificială?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Practic orice robot industrial sau colaborativ — ABB, KUKA, Fanuc, Yaskawa, Universal Robots, Omron etc. Comunicarea se face prin protocoale standard (TCP/IP, EtherNet/IP) sau plugin-uri dedicate. Sistemul de viziune oferă coordonatele 6DOF, iar robotul execută traiectoria — flexibil pentru schimbări de produse sau aranjament." }
+    },
+    {
+      "@type": "Question",
+      "name": "Care este diferența dintre 2D și 3D vision pentru ghidare robotică?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Viziunea 2D oferă poziția pe un plan (X, Y, rotație) — potrivită când piesele sunt așezate plat și fără suprapuneri. Viziunea 3D adaugă înălțime și orientare completă (6DOF), esențială pentru bin picking, asamblare în spațiu sau piese cu geometrii complexe. Folosim laser triangulation, structured light sau stereo vision în funcție de aplicație." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cât durează integrarea unui sistem de ghidare robot cu camera?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Integrarea durează de obicei 4-10 săptămâni — include calibrarea camera-robot, dezvoltarea algoritmilor de detecție, programarea traiectoriilor robotului, testare și optimizare. Pentru aplicații standard (asamblare, paletizare ghidată) timpul este la limita inferioară. Bin picking-ul aleator necesită calibrare și tunning suplimentar." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +146,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -148,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Ghidare Robotică</h2>
-  <p class="hero-sub">Precizie ghidată prin viziune pentru manipulare robotică flexibilă și adaptivă — fără scule fixe.</p>
+  <p class="hero-sub">Sisteme de ghidare robotică prin viziune artificială pentru bin picking, asamblare și automatizare flexibilă — fără scule fixe, cu precizie la nivel de milimetru.</p>
 </section>
 
 <section class="gray">
@@ -268,7 +303,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="gray">
   <div class="s-wrap">
     <p class="s-label">Servicii Conexe</p>
-    <h2 class="s-title">Explorați Mai Mult</h2>
+    <h2 class="s-title">Alte Servicii Machine Vision</h2>
     <div class="related-grid">
       <a href="./inspectie-automatizata.html" class="related-item">
         <h3>Inspecție Automatizată</h3>
@@ -282,6 +317,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Identificare &amp; Urmărire</h3>
         <p>Citirea codurilor de bare, QR și a numerelor de serie pentru trasabilitate completă.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Ghidare Robotică prin Viziune</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Ce este bin picking-ul vizual?</summary>
+        <p>Bin picking-ul vizual este capacitatea unui robot ghidat de cameră de a localiza și prelua piese aranjate aleator într-un container. Folosind viziune 2D sau 3D, sistemul calculează poziția și orientarea fiecărei piese, evită coliziunile și transmite robotului coordonatele exacte de prindere — eliminând nevoia de alimentatoare mecanice.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ce roboți pot fi ghidați prin viziune artificială?</summary>
+        <p>Practic orice robot industrial sau colaborativ — ABB, KUKA, Fanuc, Yaskawa, Universal Robots, Omron etc. Comunicarea se face prin protocoale standard (TCP/IP, EtherNet/IP) sau plugin-uri dedicate. Sistemul de viziune oferă coordonatele 6DOF, iar robotul execută traiectoria — flexibil pentru schimbări de produse sau aranjament.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Care este diferența dintre 2D și 3D vision pentru ghidare robotică?</summary>
+        <p>Viziunea 2D oferă poziția pe un plan (X, Y, rotație) — potrivită când piesele sunt așezate plat și fără suprapuneri. Viziunea 3D adaugă înălțime și orientare completă (6DOF), esențială pentru bin picking, asamblare în spațiu sau piese cu geometrii complexe. Folosim laser triangulation, structured light sau stereo vision în funcție de aplicație.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cât durează integrarea unui sistem de ghidare robot cu camera?</summary>
+        <p>Integrarea durează de obicei 4-10 săptămâni — include calibrarea camera-robot, dezvoltarea algoritmilor de detecție, programarea traiectoriilor robotului, testare și optimizare. Pentru aplicații standard (asamblare, paletizare ghidată) timpul este la limita inferioară. Bin picking-ul aleator necesită calibrare și tunning suplimentar.</p>
+      </details>
     </div>
   </div>
 </section>

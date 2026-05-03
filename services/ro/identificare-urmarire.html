@@ -44,6 +44,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce coduri de bare pot fi citite de sistemele industriale?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sistemele moderne citesc toate codurile 1D standard (Code 128, Code 39, EAN, UPC, Interleaved 2 of 5) și 2D (Data Matrix, QR Code, PDF417, Aztec, MaxiCode). Lucrăm și cu marcaje DPM (Direct Part Marking) gravate prin laser sau punctare pe metale, plastic și componente — chiar și cu contrast scăzut sau parțial deteriorate." }
+    },
+    {
+      "@type": "Question",
+      "name": "Funcționează citirea OCR pe etichete deteriorate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Da. OCR-ul modern bazat pe deep learning poate citi text imprimat chiar și cu uzură parțială, contrast slab, înclinări sau pe suprafețe curbate. Antrenăm modele specifice fonturilor și condițiilor dvs. pentru a maximiza acuratețea — uneori superioară OCR-ului bazat pe template clasic în condiții industriale dificile." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum se integrează datele de trasabilitate cu sistemele ERP/MES?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Citirile sunt transmise în timp real către sistemele MES, ERP sau WMS prin OPC UA, REST API, baze de date SQL sau fișiere XML/CSV. Putem genera evenimente de trasabilitate (start operație, end operație, respingere), genealogia componentelor și rapoarte de producție per lot, integrate cu SAP, Oracle, Siemens MES sau soluții personalizate." }
+    },
+    {
+      "@type": "Question",
+      "name": "Care este viteza maximă de citire a codurilor de bare pe linie?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Camerele industriale moderne citesc 100-500 coduri pe secundă, în funcție de tipul codului, dimensiune și calitatea imprimării. Pentru linii ultra-rapide (sticle, blistere), folosim camere line-scan și sisteme multi-cameră sincronizate care procesează mii de citiri pe minut — fără a încetini producția." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +146,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -148,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Identificare &amp; Urmărire</h2>
-  <p class="hero-sub">Trasabilitate completă a produselor — de la primul pas de producție până la livrarea finală.</p>
+  <p class="hero-sub">Sisteme de citire coduri de bare, QR și OCR pentru trasabilitate completă a produselor — de la prima operație de producție până la livrarea finală.</p>
 </section>
 
 <section class="gray">
@@ -268,7 +303,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="gray">
   <div class="s-wrap">
     <p class="s-label">Servicii Conexe</p>
-    <h2 class="s-title">Explorați Mai Mult</h2>
+    <h2 class="s-title">Alte Servicii Machine Vision</h2>
     <div class="related-grid">
       <a href="./inspectie-automatizata.html" class="related-item">
         <h3>Inspecție Automatizată</h3>
@@ -282,6 +317,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Industrii Deservite</h3>
         <p>Vedeți cum sunt implementate soluțiile de trasabilitate în auto, farma, alimentar și logistică.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Identificare & Trasabilitate</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Ce coduri de bare pot fi citite de sistemele industriale?</summary>
+        <p>Sistemele moderne citesc toate codurile 1D standard (Code 128, Code 39, EAN, UPC, Interleaved 2 of 5) și 2D (Data Matrix, QR Code, PDF417, Aztec, MaxiCode). Lucrăm și cu marcaje DPM (Direct Part Marking) gravate prin laser sau punctare pe metale, plastic și componente — chiar și cu contrast scăzut sau parțial deteriorate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Funcționează citirea OCR pe etichete deteriorate?</summary>
+        <p>Da. OCR-ul modern bazat pe deep learning poate citi text imprimat chiar și cu uzură parțială, contrast slab, înclinări sau pe suprafețe curbate. Antrenăm modele specifice fonturilor și condițiilor dvs. pentru a maximiza acuratețea — uneori superioară OCR-ului bazat pe template clasic în condiții industriale dificile.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum se integrează datele de trasabilitate cu sistemele ERP/MES?</summary>
+        <p>Citirile sunt transmise în timp real către sistemele MES, ERP sau WMS prin OPC UA, REST API, baze de date SQL sau fișiere XML/CSV. Putem genera evenimente de trasabilitate (start operație, end operație, respingere), genealogia componentelor și rapoarte de producție per lot, integrate cu SAP, Oracle, Siemens MES sau soluții personalizate.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Care este viteza maximă de citire a codurilor de bare pe linie?</summary>
+        <p>Camerele industriale moderne citesc 100-500 coduri pe secundă, în funcție de tipul codului, dimensiune și calitatea imprimării. Pentru linii ultra-rapide (sticle, blistere), folosim camere line-scan și sisteme multi-cameră sincronizate care procesează mii de citiri pe minut — fără a încetini producția.</p>
+      </details>
     </div>
   </div>
 </section>

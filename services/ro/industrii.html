@@ -43,6 +43,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "În ce industrii este utilizat machine vision-ul?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Machine vision-ul este folosit în industria auto (suduri, suprafețe caroserie, asamblare), electronică (AOI pentru PCB, plasare componente), alimentar și băuturi (corpuri străine, umplere, etichete), farmaceutică (blistere, tablete, sigilii), logistică (sortare, dimensionare, citire coduri) și producție generală pentru control calitate și automatizare." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce aplicații are machine vision-ul în industria auto?",
+      "acceptedAnswer": { "@type": "Answer", "text": "În industria auto, machine vision-ul verifică suduri (continuitate, defecte), suprafețe caroserie (zgârieturi, lovituri), prezența și poziția elementelor de fixare, asamblare panouri și interioare, dimensiuni componente critice (frâne, transmisie), citire VIN și marcaje pentru trasabilitate, și ghidează roboți pentru asamblare și manipulare." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum este folosit machine vision-ul în industria farmaceutică?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aplicațiile farmaceutice includ verificarea blisterelor (tablete prezente, formă, culoare), inspecția fiolelor și flacoanelor (corpuri străine, nivel de umplere, integritatea sigiliului), conformitatea etichetelor (text corect, lot, dată expirare), trasabilitatea Data Matrix conform reglementărilor (DSCSA, FMD) și controlul vizual al pulberilor și soluțiilor." }
+    },
+    {
+      "@type": "Question",
+      "name": "Este potrivit machine vision-ul pentru linii de producție mici?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Da. Sistemele moderne sunt scalabile — există soluții accesibile cu o singură cameră smart pentru linii mici (rentabile sub 1 an), sisteme modulare pentru producție medie și soluții complexe multi-stație pentru volume mari. Beneficiile (consistență, trasabilitate, reducere defecte) se aplică indiferent de scala producției." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,6 +142,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.industry-block .ind-body{grid-template-columns:1fr;gap:32px;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -144,7 +179,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Industrii Deservite</h2>
-  <p class="hero-sub">Expertiză în viziune artificială implementată în sectoarele industriale cheie din România.</p>
+  <p class="hero-sub">Sisteme de machine vision și inspecție automată implementate în industria auto, electronică, alimentară, logistică și farmaceutică din România.</p>
 </section>
 
 <section class="gray">
@@ -288,6 +323,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Contactați-ne</h3>
         <p>Discutați cerințele dvs. specifice de industrie.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Machine Vision în Industrii</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>În ce industrii este utilizat machine vision-ul?</summary>
+        <p>Machine vision-ul este folosit în industria auto (suduri, suprafețe caroserie, asamblare), electronică (AOI pentru PCB, plasare componente), alimentar și băuturi (corpuri străine, umplere, etichete), farmaceutică (blistere, tablete, sigilii), logistică (sortare, dimensionare, citire coduri) și producție generală pentru control calitate și automatizare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ce aplicații are machine vision-ul în industria auto?</summary>
+        <p>În industria auto, machine vision-ul verifică suduri (continuitate, defecte), suprafețe caroserie (zgârieturi, lovituri), prezența și poziția elementelor de fixare, asamblare panouri și interioare, dimensiuni componente critice (frâne, transmisie), citire VIN și marcaje pentru trasabilitate, și ghidează roboți pentru asamblare și manipulare.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum este folosit machine vision-ul în industria farmaceutică?</summary>
+        <p>Aplicațiile farmaceutice includ verificarea blisterelor (tablete prezente, formă, culoare), inspecția fiolelor și flacoanelor (corpuri străine, nivel de umplere, integritatea sigiliului), conformitatea etichetelor (text corect, lot, dată expirare), trasabilitatea Data Matrix conform reglementărilor (DSCSA, FMD) și controlul vizual al pulberilor și soluțiilor.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Este potrivit machine vision-ul pentru linii de producție mici?</summary>
+        <p>Da. Sistemele moderne sunt scalabile — există soluții accesibile cu o singură cameră smart pentru linii mici (rentabile sub 1 an), sisteme modulare pentru producție medie și soluții complexe multi-stație pentru volume mari. Beneficiile (consistență, trasabilitate, reducere defecte) se aplică indiferent de scala producției.</p>
+      </details>
     </div>
   </div>
 </section>
