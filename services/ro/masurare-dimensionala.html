@@ -44,6 +44,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ce precizie pot atinge sistemele de măsurare dimensională?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Precizia depinde de tehnologie și dimensiunea piesei. Sistemele optice 2D ating 5-50 microni, scanerele 3D laser oferă 10-100 microni, iar sistemele cu lumină structurată sau confocale ajung la 1-5 microni. Pentru cea mai înaltă precizie pe câmp limitat folosim microscopie automată cu rezoluție sub-micron." }
+    },
+    {
+      "@type": "Question",
+      "name": "Care este diferența dintre măsurarea 2D și 3D?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Măsurarea 2D verifică dimensiuni pe un plan (lungime, lățime, diametre, distanțe) folosind imagini bidimensionale și calibrare precisă. Măsurarea 3D captează volumul complet al piesei (înălțimi, planeitate, GD&T spațial, deviații față de model CAD) folosind scanere laser, lumină structurată sau confocale — necesară pentru piese complexe." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pot înlocui un sistem optic CMM-ul tradițional?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pentru multe aplicații, da. Sistemele optice de măsurare sunt mai rapide (secunde vs minute), nu necesită contact cu piesa și pot fi integrate direct pe linia de producție pentru control 100%. CMM-urile rămân superioare pentru piese foarte mari, măsurători de profunzime extremă sau certificări metrologice cu acuratețe sub-micron." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum verifică sistemele toleranțele GD&T?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sistemele importă modelul CAD al piesei și aplică toleranțele GD&T (planeitate, perpendicularitate, concentricitate, profil etc.) direct pe scanarea 3D obținută. Rezultatele sunt comparate automat cu specificațiile din desen, generând rapoarte color-coded și decizii Acceptat/Respins în timp real, integrate cu sistemul MES." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +146,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -148,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Măsurare Dimensională</h2>
-  <p class="hero-sub">Inspecție dimensională de înaltă precizie — captând fiecare micron față de desenul dvs., direct în producție.</p>
+  <p class="hero-sub">Sisteme de măsurare dimensională și control dimensional de înaltă precizie — verificare la nivel de micron, direct pe linia de producție.</p>
 </section>
 
 <section class="gray">
@@ -261,7 +296,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="gray">
   <div class="s-wrap">
     <p class="s-label">Servicii Conexe</p>
-    <h2 class="s-title">Explorați Mai Mult</h2>
+    <h2 class="s-title">Alte Servicii Machine Vision</h2>
     <div class="related-grid">
       <a href="./inspectie-automatizata.html" class="related-item">
         <h3>Inspecție Automatizată</h3>
@@ -275,6 +310,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Ghidare Robotică</h3>
         <p>Preluare, plasare și asamblare ghidate vizual pentru celule robotice.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Măsurare & Control Dimensional</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Ce precizie pot atinge sistemele de măsurare dimensională?</summary>
+        <p>Precizia depinde de tehnologie și dimensiunea piesei. Sistemele optice 2D ating 5-50 microni, scanerele 3D laser oferă 10-100 microni, iar sistemele cu lumină structurată sau confocale ajung la 1-5 microni. Pentru cea mai înaltă precizie pe câmp limitat folosim microscopie automată cu rezoluție sub-micron.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Care este diferența dintre măsurarea 2D și 3D?</summary>
+        <p>Măsurarea 2D verifică dimensiuni pe un plan (lungime, lățime, diametre, distanțe) folosind imagini bidimensionale și calibrare precisă. Măsurarea 3D captează volumul complet al piesei (înălțimi, planeitate, GD&amp;T spațial, deviații față de model CAD) folosind scanere laser, lumină structurată sau confocale — necesară pentru piese complexe.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Pot înlocui un sistem optic CMM-ul tradițional?</summary>
+        <p>Pentru multe aplicații, da. Sistemele optice de măsurare sunt mai rapide (secunde vs minute), nu necesită contact cu piesa și pot fi integrate direct pe linia de producție pentru control 100%. CMM-urile rămân superioare pentru piese foarte mari, măsurători de profunzime extremă sau certificări metrologice cu acuratețe sub-micron.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum verifică sistemele toleranțele GD&amp;T?</summary>
+        <p>Sistemele importă modelul CAD al piesei și aplică toleranțele GD&amp;T (planeitate, perpendicularitate, concentricitate, profil etc.) direct pe scanarea 3D obținută. Rezultatele sunt comparate automat cu specificațiile din desen, generând rapoarte color-coded și decizii Acceptat/Respins în timp real, integrate cu sistemul MES.</p>
+      </details>
     </div>
   </div>
 </section>

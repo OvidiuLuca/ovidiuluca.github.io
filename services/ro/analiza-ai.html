@@ -44,6 +44,34 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Care este diferența dintre inspecția clasică și cea cu deep learning?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Inspecția clasică folosește reguli explicite scrise de inginer (detecția marginilor, dimensiuni, potrivire de șabloane). Deep learning învață singur din exemple etichetate de produse bune și cu defecte. Pentru defecte cosmetice subtile, variabile sau cu aspect complex (textile, alimente, suprafețe naturale), deep learning oferă rezultate semnificativ mai bune decât metodele clasice bazate pe reguli." }
+    },
+    {
+      "@type": "Question",
+      "name": "De câte imagini am nevoie pentru a antrena un sistem de inspecție AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depinde de complexitatea defectelor. Pentru clasificări simple (bun/defect), 200-500 imagini per clasă pot fi suficiente. Pentru defecte rare sau variabile, e nevoie de mii de imagini. Folosim tehnici de augmentare a datelor și transfer learning pentru a reduce semnificativ numărul de imagini necesare în multe aplicații industriale." }
+    },
+    {
+      "@type": "Question",
+      "name": "Funcționează deep learning pe linii de producție rapide?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Da. Modelele moderne de deep learning rulează pe GPU-uri industriale și pot procesa zeci sau sute de imagini pe secundă. Pentru aplicații extrem de rapide, optimizăm modelul prin tehnici precum quantization și pruning, sau folosim accelerare hardware dedicată (Jetson, FPGA) direct pe linia de producție." }
+    },
+    {
+      "@type": "Question",
+      "name": "Cum se integrează un sistem de inspecție AI cu echipamentele existente?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sistemele se integrează prin protocoale industriale standard — Profinet, EtherNet/IP, Modbus TCP, OPC UA — pentru a comunica cu PLC-uri, roboți și sisteme MES/ERP. Putem trimite semnale de respingere, înregistra date de trasabilitate și raporta statistici de calitate în timp real către sistemele dvs. existente." }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4KCQH1Z2Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T4KCQH1Z2Z');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +146,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
 .lang-switcher{display:flex;align-items:center;gap:4px;}.lang-btn{-webkit-appearance:none;appearance:none;font-family:"Instrument Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--mid);padding:4px 10px;cursor:pointer;transition:all 0.2s;border-radius:2px;}.lang-btn.active{color:var(--black);border-color:var(--black);}.lang-btn:hover{color:var(--black);border-color:var(--black);}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -148,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="page-hero">
   <p class="s-label">Serviciile Noastre</p>
   <h2>Analiză Bazată pe IA</h2>
-  <p class="hero-sub">Inspecție bazată pe deep learning care învață din datele dvs. — nu din reguli.</p>
+  <p class="hero-sub">Inspecție vizuală cu inteligență artificială și deep learning — învață din datele dvs. și detectează defecte pe care metodele clasice bazate pe reguli nu le văd.</p>
 </section>
 
 <section class="gray">
@@ -268,7 +303,7 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 <section class="gray">
   <div class="s-wrap">
     <p class="s-label">Servicii Conexe</p>
-    <h2 class="s-title">Explorați Mai Mult</h2>
+    <h2 class="s-title">Alte Servicii Machine Vision</h2>
     <div class="related-grid">
       <a href="./inspectie-automatizata.html" class="related-item">
         <h3>Inspecție Automatizată</h3>
@@ -282,6 +317,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3>Identificare &amp; Urmărire</h3>
         <p>Citirea codurilor de bare, QR și a numerelor de serie pentru trasabilitate completă.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">Întrebări Frecvente</p>
+    <h2 class="s-title">FAQ — Inspecție AI & Deep Learning</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Care este diferența dintre inspecția clasică și cea cu deep learning?</summary>
+        <p>Inspecția clasică folosește reguli explicite scrise de inginer (detecția marginilor, dimensiuni, potrivire de șabloane). Deep learning învață singur din exemple etichetate de produse bune și cu defecte. Pentru defecte cosmetice subtile, variabile sau cu aspect complex (textile, alimente, suprafețe naturale), deep learning oferă rezultate semnificativ mai bune decât metodele clasice bazate pe reguli.</p>
+      </details>
+      <details class="faq-item">
+        <summary>De câte imagini am nevoie pentru a antrena un sistem de inspecție AI?</summary>
+        <p>Depinde de complexitatea defectelor. Pentru clasificări simple (bun/defect), 200-500 imagini per clasă pot fi suficiente. Pentru defecte rare sau variabile, e nevoie de mii de imagini. Folosim tehnici de augmentare a datelor și transfer learning pentru a reduce semnificativ numărul de imagini necesare în multe aplicații industriale.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Funcționează deep learning pe linii de producție rapide?</summary>
+        <p>Da. Modelele moderne de deep learning rulează pe GPU-uri industriale și pot procesa zeci sau sute de imagini pe secundă. Pentru aplicații extrem de rapide, optimizăm modelul prin tehnici precum quantization și pruning, sau folosim accelerare hardware dedicată (Jetson, FPGA) direct pe linia de producție.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cum se integrează un sistem de inspecție AI cu echipamentele existente?</summary>
+        <p>Sistemele se integrează prin protocoale industriale standard — Profinet, EtherNet/IP, Modbus TCP, OPC UA — pentru a comunica cu PLC-uri, roboți și sisteme MES/ERP. Putem trimite semnale de respingere, înregistra date de trasabilitate și raporta statistici de calitate în timp real către sistemele dvs. existente.</p>
+      </details>
     </div>
   </div>
 </section>
