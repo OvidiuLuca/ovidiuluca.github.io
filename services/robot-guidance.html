@@ -11,6 +11,16 @@
 <link rel="alternate" hreflang="en" href="https://opsistech.ro/services/robot-guidance.html" />
 <link rel="alternate" hreflang="ro" href="https://opsistech.ro/services/ro/ghidare-robotica.html" />
 <link rel="alternate" hreflang="x-default" href="https://opsistech.ro/services/robot-guidance.html" />
+<meta property="og:title" content="Robot Guidance | Vision-Guided Robotics for Industry | Opsistech" />
+<meta property="og:description" content="Opsistech provides vision-guided robot guidance systems for bin picking, automotive assembly, and logistics automation in Romania. Accurate and integration-ready." />
+<meta property="og:url" content="https://opsistech.ro/services/robot-guidance.html" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Opsistech" />
+<meta property="og:image" content="https://opsistech.ro/images/robot-guidance-hero-1280.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Robot Guidance | Vision-Guided Robotics for Industry | Opsistech" />
+<meta name="twitter:description" content="Vision-guided robot guidance systems for bin picking, automotive assembly, and logistics automation in Romania." />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,6 +40,34 @@
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://opsistech.ro/" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://opsistech.ro/#services" },
     { "@type": "ListItem", "position": 3, "name": "Robot Guidance", "item": "https://opsistech.ro/services/robot-guidance.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is visual bin picking?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Visual bin picking is the ability of a camera-guided robot to locate and pick randomly arranged parts from a container. Using 2D or 3D vision, the system calculates the position and orientation of each part, avoids collisions, and transmits exact gripping coordinates to the robot — eliminating the need for mechanical feeders." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which robots can be vision-guided?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Virtually any industrial or collaborative robot — ABB, KUKA, Fanuc, Yaskawa, Universal Robots, Omron, and others. Communication uses standard protocols (TCP/IP, EtherNet/IP) or dedicated plugins. The vision system provides 6DOF coordinates and the robot executes the trajectory — flexible for product or layout changes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 2D and 3D vision for robot guidance?",
+      "acceptedAnswer": { "@type": "Answer", "text": "2D vision provides position on a plane (X, Y, rotation) — suitable when parts are flat and non-overlapping. 3D vision adds height and full orientation (6DOF), essential for bin picking, spatial assembly, or parts with complex geometry. We use laser triangulation, structured light, or stereo vision depending on the application." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does integration of a robot guidance system take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Integration typically takes 4–10 weeks — including camera-robot calibration, detection algorithm development, robot trajectory programming, testing, and optimisation. Standard applications (assembly, guided palletising) sit at the lower end. Random bin picking requires additional calibration and fine-tuning." }
+    }
   ]
 }
 </script>
@@ -110,6 +148,13 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
 .f-copy{font-size:12px;color:var(--mid);}
 @media(max-width:800px){.feature-grid{grid-template-columns:1fr 1fr;}.app-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr 1fr;}nav{gap:28px;}footer{flex-direction:column;align-items:flex-start;gap:24px;}.f-links{flex-wrap:wrap;gap:20px;}}
 @media(max-width:600px){.feature-grid{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}nav{gap:20px;}.page-hero{padding:60px 24px 72px;}section{padding:72px 24px;}footer{padding:32px 24px;}.breadcrumb{padding:16px 24px;}.step-item{gap:20px;}.step-num{width:36px;font-size:28px;}}
+.faq-list{margin-top:48px;border-top:1px solid var(--line);}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+.faq-item summary{font-family:"Instrument Serif",serif;font-size:18px;color:var(--black);cursor:pointer;list-style:none;padding-right:32px;position:relative;line-height:1.4;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:24px;color:var(--mid);font-weight:300;}
+.faq-item[open] summary::after{content:"−";}
+.faq-item p{font-size:14px;color:var(--mid);line-height:1.8;margin-top:14px;padding-right:32px;}
 </style>
 </head>
 <body>
@@ -274,6 +319,31 @@ footer{border-top:1px solid var(--line);padding:40px;display:flex;justify-conten
         <h3 data-en="Identification &amp; Tracking" data-ro="Identificare &amp; Urmărire">Identification &amp; Tracking</h3>
         <p data-en="Barcode, QR, and serial number reading for full traceability." data-ro="Citirea codurilor de bare, QR și a numerelor de serie pentru trasabilitate completă.">Barcode, QR, and serial number reading for full traceability.</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="s-wrap">
+    <p class="s-label">FAQ</p>
+    <h2 class="s-title">Frequently Asked Questions — Robot Guidance</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is visual bin picking?</summary>
+        <p>Visual bin picking is the ability of a camera-guided robot to locate and pick randomly arranged parts from a container. Using 2D or 3D vision, the system calculates the position and orientation of each part, avoids collisions, and transmits exact gripping coordinates to the robot — eliminating the need for mechanical feeders.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which robots can be vision-guided?</summary>
+        <p>Virtually any industrial or collaborative robot — ABB, KUKA, Fanuc, Yaskawa, Universal Robots, Omron, and others. Communication uses standard protocols (TCP/IP, EtherNet/IP) or dedicated plugins. The vision system provides 6DOF coordinates and the robot executes the trajectory — flexible for product or layout changes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is the difference between 2D and 3D vision for robot guidance?</summary>
+        <p>2D vision provides position on a plane (X, Y, rotation) — suitable when parts are flat and non-overlapping. 3D vision adds height and full orientation (6DOF), essential for bin picking, spatial assembly, or parts with complex geometry. We use laser triangulation, structured light, or stereo vision depending on the application.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does integration of a robot guidance system take?</summary>
+        <p>Integration typically takes 4–10 weeks — including camera-robot calibration, detection algorithm development, robot trajectory programming, testing, and optimisation. Standard applications (assembly, guided palletising) sit at the lower end. Random bin picking requires additional calibration and fine-tuning.</p>
+      </details>
     </div>
   </div>
 </section>
